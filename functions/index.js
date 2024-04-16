@@ -13,7 +13,7 @@ exports.minRefFn = onRequest((request, response) => {
         minRef.get().then((doc) => {
             if (doc.exists){
                 console.log("Updated Document!");   
-                response.send("Minerals: " + JSON.stringify(doc.data()));
+                response.send("Minerals ->: " + JSON.stringify(doc.data()));
             }
             else{
                 console.log("No such Document!");                
@@ -24,7 +24,6 @@ exports.minRefFn = onRequest((request, response) => {
             response.send("Error getting document, check the logs");
           });   
 });
-
 
 
 const parcelData = db.collection('njflutter').doc('parcels');

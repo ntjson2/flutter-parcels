@@ -1,5 +1,4 @@
 // ignore_for_file: prefer_const_constructors
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
@@ -66,8 +65,8 @@ class ChangingBoxState extends State<changingBox> {
     }
 
     var res = http.get(
-      Uri.parse(
-          'http://localhost:5000/njflutter-01/us-central1/parcelData?index=$gridIndex'),
+      Uri.parse('https://parceldata-wrq3uwlj6a-uc.a.run.app/?index=$gridIndex'),
+      // Uri.parse('http://localhost:5000/njflutter-01/us-central1/parcelData?index=$gridIndex'),
     );
 
     res.then((value) {
